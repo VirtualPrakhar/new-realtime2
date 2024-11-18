@@ -1,12 +1,12 @@
 import React, {useState} from 'react';
 import Client from '../components/Client';
-import Editor from '../components/editor';
+import Editor from '../components/Editor';
 
 const EditorPage = () => {
   const [clients, setClients] = useState([
     {socketId: 1, username: 'Rajesh K'},
     {socketId: 2, username: 'Durgesh K'},
-    {socketId: 3, username: 'Nagesh K'},
+    {socketId: 3, username: 'Naagesh K'},
   ]);
   return (
     <div className="mainWrap"> 
@@ -21,11 +21,12 @@ const EditorPage = () => {
           </div>
           <h3>Connected</h3>
           <div className="clientsList">
-            {clients.map((client) => (
-              <Client 
-                key={client.socketId}
-                username={client.username}
-              />
+            {
+              clients.map((client) => (
+                <Client 
+                  key={client.socketId}
+                  username={client.username}
+                />
             ))}
           </div>
         </div>

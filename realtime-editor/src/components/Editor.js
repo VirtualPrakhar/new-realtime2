@@ -9,7 +9,7 @@ import 'codemirror/addon/edit/closebrackets';
 const Editor = () => {
   useEffect(() => {
     async function init(){
-      Codemirror.fromTextArea(document.getElementById('realtimeEditor'),{
+      Codemirror.fromTextArea(document.getElementById("realtimeEditor"),{
         mode: {name: 'javascript', json: true},
         theme: 'dracula',
         autoCloseTags: true,
@@ -20,7 +20,7 @@ const Editor = () => {
     init();
   }, []);
 
-  return   <textarea id="realtimeEditor"></textarea>
+  return <textarea id="realtimeEditor"></textarea>;
 };
 
 export default Editor;
